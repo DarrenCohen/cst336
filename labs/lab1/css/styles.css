@@ -1,0 +1,88 @@
+body {
+    background-color: #a8ad7c;
+    color: #41398e;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+nav a { /* links within "nav" container */
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none; /* Removes underline */
+    color: #FFFFFF; /* By default, links are blue */
+}
+
+.active {
+    background-color: #808080;
+}
+
+nav a:hover { /* pseudo class */
+    border-bottom: 2px #FFA500 solid; 
+    font-size: 2em;
+    transition: .9s; /* transition effect */
+}
+
+#myPic {
+    border-radius: 50px;
+}
+
+#me, #welcomeText {
+    float: left;
+}
+
+#welcomeText {
+    text-align: left;
+}
+
+#author {
+    text-align: right;
+}
+
+footer {
+    clear: left;
+    color: #FFFFFF;
+}
+
+table {
+    margin: 0px auto;
+    color: #FFFFFF;
+}
+
+td {
+    padding-right: 10px;
+    font-size: 1.3em;
+}
+
+td strong {
+    color: #FFFF00;
+}
+
+#table-header {
+    background-color: #351a00;
+}
+
+.table-row {
+    background-color: #753900;
+}
+
+ul {
+    text-align: left;
+    padding-left: 200px;
+}
+
+.hobby {
+    color: #FFFF00;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+}
+
+#content {
+    text-align: center;
+}
