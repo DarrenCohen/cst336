@@ -45,6 +45,14 @@ nav a:hover { /* pseudo class */
     display: inline-block;
 }
 
+#buddyverified-container {
+    text-align: right;
+}
+
+#buddyverified {
+    display: inline-block;
+}
+
 footer {
     clear: left;
     color: #FFFFFF;
