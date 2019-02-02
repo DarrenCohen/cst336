@@ -37,8 +37,12 @@ nav a:hover { /* pseudo class */
     text-align: left;
 }
 
-#author {
-    text-align: right;
+#hobbies-container {
+    text-align: center;
+}
+
+#hobbies {
+    display: inline-block;
 }
 
 footer {
