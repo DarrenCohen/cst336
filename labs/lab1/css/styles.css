@@ -16,7 +16,7 @@ nav a { /* links within "nav" container */
 }
 
 .active {
-    background-color: #808080;
+    background-color: #41398e;
 }
 
 nav a:hover { /* pseudo class */
