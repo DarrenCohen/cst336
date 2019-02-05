@@ -1,0 +1,72 @@
+body {
+
+    background-color: #258e4f; 
+    color: #FFFFFF;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: left;
+}
+
+nav a {
+    padding:15px;
+    padding-bottom:2px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.active {
+    background-color: #917d02;
+}
+
+.textContainer {
+    float: left;
+}
+
+nav a:hover {
+    border-right: 2px #FFFFFF solid;
+    border-left: 2px #FFFFFF solid;
+    font-size: 2em;
+    transition: .9s;
+}
+
+.pic {
+    width: 250px;
+    float: left;
+}
+
+.link {
+    float: right;
+    color: #FFFFFF;
+}
+
+#buddyverified-container {
+    text-align: right;
+}
+
+#buddyverified {
+    display: inline-block;
+}
+
+footer {
+    clear: left;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-family: 'Roboto Slab', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+}
