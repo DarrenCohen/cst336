@@ -47,13 +47,17 @@ nav a:hover {
     float: left;
 }
 
+ul {
+    text-align: left;
+}
+
 .link {
-    float: right;
+    text-align: center;
     color: #FFFFFF;
 }
 
 #buddyverified-container {
-    text-align: right;
+    float: right;
 }
 
 #buddyverified {

@@ -1,0 +1,26 @@
+body{
+    text-align:center;
+    background-image: url("../img/pastelClouds.jpg");
+    background-size: cover;
+}
+
+.jumbotron {
+    background-color:#2ca7e0;
+}
+
+#directions {
+    background-color:#2ca7e0;
+    font-size: 2em;    
+    width:900px;
+    height:200px;
+    margin:0 auto;
+    border-radius:20px;
+}
+
+#bottomStuff {
+    padding-top: 200px;
+}
+
+.guessSubmit {
+    background-color: #db8cce;
+}
