@@ -6,7 +6,7 @@
             
             var guessSubmit = document.querySelector('.guessSubmit');
             var guessField = document.querySelector('.guessField');
-            //$(".guessSubmit").css("background-color", "#db8cce");
+            $(".guessSubmit").css("background-color", "#db8cce");
             
             var guessCount = 1;
             var winCount = 0;
@@ -20,6 +20,7 @@
             
             function checkGuess() {                                         
                 var userGuess = Number(guessField.value);
+                
                 if(isNaN(userGuess)||userGuess>99){
                     lastResult.innerHTML = 'Sorry, that\'s not a valid input!';
                     $("#lastResult").css("background-color", "red");
@@ -61,7 +62,7 @@
             }
                 $("#guessSubmit").on("click", function() {
                 let userGuess = $("#guessField").val();
-                })
+                });
                 guessSubmit.addEventListener('click', checkGuess);
             
                 function setGameOver() {
