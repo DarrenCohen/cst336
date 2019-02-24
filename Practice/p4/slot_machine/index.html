@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slot Machine</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+<h1>Slot Machine</h1>
+<div id="image1"></div>
+    </body>
+    <script>
+        /* global $ */
+        let imageArray = ["cherry", "grapes", "lemon"];
+        let randomIndex = Math.floor(Math.ransom() * 3 );
+        let randomImage = imageArray[randomIndex];
+        
+        $("#image1").html("<img src='img/"+randomImage+".png' />);
+        
+        
+    </script>
+</html>

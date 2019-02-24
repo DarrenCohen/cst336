@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- Must come before any other jquery code -->
+        <script> /* global $ */
+            $(document).ready(function() {
+                
+                // $("#para1").css("color", "red");
+                // $("#para2").css("color", "blue");
+                
+                // $('div[title*="mainPar"]').css("color", "green"); // This sepcifies just the second paragraph, because it is a div element and not a p element
+                
+                // $('div').hide(); // Hides the div element
+                /*
+                $('#h1Hide').click(function() { // Hides when clicked
+                    $('div').hide();
+                })
+                $('#h1Show').click(function() { // Shows when clicked
+                    $('div').show();
+                })
+                */
+                
+                /*
+                $('#h1Hide').click(function() { // toggles show/hide on and off
+                    $('div').toggle();
+                })
+                */
+                /*
+                $("#myImage").click(function() { // Hides when clicking image
+                    $("#para2").hide();
+                    
+                });
+                */
+                /*
+                $("#myImage").hover(function() { // Hides when hovering over image
+                    $("#para2").hide();
+                    
+                });
+                */
+                /*
+                $("#myImage").mouseover(function() { // Similar to hover
+                    $("#para2").hide();
+                    
+                });
+                
+                $("#myImage").mouseout(function() { // Show element when moving mouse off of button
+                    $("#para2").show();
+                    
+                });
+                */
+                
+                // $('#para3').html('<h2>Hello, this is new html code</h2>') // replaces text in paragraph 3
+                /*
+                $("#spoil").click(function() { // reveals spoiler
+                    $("#reveal").html("<h3>The butler dunnit!<h3>");
+                });
+                */
+                /*
+                $("#anc1").attr({
+                    href: "https://www.google.com/", // Button click links to google.com
+                    target: "_blank" // Opens google.com in new tab
+                });
+                */
+                /*
+                $("#myImage").click(function(){ // Adds more content to paragraph
+                    $("#para2").append("<h3> Here is more stuff.</h3>");
+                });
+                */
+                /*
+                $("#myImage").click(function(){
+                    // $("#para3").wrap("<h2></h2>") // Wraps text in header tags on mouse click. Each mouse click makes text bigger, as if wrapping in multiple tags
+                    $("#para3").wrap("<a href='http://www.google.com'></a>") // Clicking button turns para into link, which opens google
+                });
+                */
+                /*
+                $("#myImage").on("click", function(event){ // Alternative way to bind elements to events
+                $("#para3").wrap("<h2></h2>")
+                });
+                */
+                /*
+                $("#myImage").click(function(){ 
+                var enterD = prompt("Enter some data below");
+                $("#para2").append("<h2>" + enterD + "</h2>"); // Appends prompt text input to para 2 every time you click button
+                });
+                */
+                /*
+                var myObj = {first:1, second:2, third:3, fourth:4}; // Creates array with a name value pair, string numbers are the indices, but the values could also be strings
+                $.each(myObj, function(i, val) // .each)() loops to end of array
+                {
+                    $('#' + i).append("The value of " + i + " is " + val); // calls each div and appends the text to them
+                });
+                */
+                /*
+                $('#para3').hide(); // Hides text
+                $('#btnClick1').click(function(){
+                $('#para3').fadeIn(2000); // Causes text to fade in over 2 seconds on click of button
+                });
+                
+                $('#btnClick2').click(function(){
+                $('#para3').fadeOut(1000); // Causes text to fade out over 1 second on click of button
+                });
+                */
+                /*
+                $('#para3').hide();
+                $('#btnClick1').mouseover(function(){
+                $('#para3').slideDown(250); // text appears line by line when moused over, in 1/4 second
+                });
+                $('#btnClick1').mouseout(function(){
+                $('#para3').slideUp(250); // text disappears line by line when moused out, in 1/4 second
+                });
+                */
+                /*
+                $('#para3').hide();
+                $('#btnClick1').mouseover(function(){ // Toggles slide with mouseovers
+                $('#para3').slideToggle(250); // text appears line by line when moused over, in 1/4 second
+                });
+                */
+                /*
+                // Effects can have 3 parameters: 'Duration,' 'easing,' and the third is called a 'complete parameter' (meaning it can be a full function)
+                // If the third parameter is used, it executes first
+                $('#para3').hide(1000, 'swing'); // 2nd parameter 'swing' makes paragraph shrink away, 
+                $('#btnClick1').click(function(){ // Toggles slide with clicks
+                $('#para3').slideToggle(250); 
+                });
+                */
+                
+                $("#btnClick1").click(function(){
+                    $("#para3").animate(
+                        {fontSize:'40pt', opacity:'.5'}, 2000 // Can create as many properties as you want, using css style format of property:value
+                        )
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div id="fourth"></div>
+        
+        <h1 id="h1Hide">Click here to hide the div paragraph</h1>
+        
+        <p id="para1" class="C1" title="mainPar">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum."
+        </p>
+        
+        <h1 id="h1Show">Click here to show the div paragraphs</h1>
+        
+        <div id="para2" class="C1" title="mainPar"> 
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab 
+            illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+            aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem 
+            ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
+            quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi 
+            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem 
+            eum fugiat quo voluptas nulla pariatur?"
+        </div>
+            <p>
+                <img src="../img/rectangle-icon.png" id="btnClick1"/>
+            </p>
+            <br>
+        <p id="para3" class="C1" title="mainPar"> 
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et 
+            quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est 
+            laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio 
+            cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus 
+            autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+            recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis 
+            doloribus asperiores repellat."
+        </p>
+        <p>
+                <img src="../img/rectangle-icon.png" id="btnClick2"/>
+        </p>
+        <p id="para4" class="C1" title="mainPar"> 
+            I just finished watching that new mystery movie. It was great except I didn't like the fact that<br>(Spoiler Alert! <a href="#"id="spoil">Click here </a>to reveal ending)
+            <div id="reveal"></div>
+            Otherwise this would have been a great movie.
+        </p>
+        
+        <p>
+            <a id="anc1">
+                <img src="../img/rectangle-icon.png" id="myImage"/>
+            </a>
+        </p>
+
+    </body>
+</html>

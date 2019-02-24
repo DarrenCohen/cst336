@@ -1,3 +1,5 @@
+            /* global $ */
+            
             var randomNumber = Math.floor(Math.random() * 99) + 1;
             var guesses = document.querySelector('#guesses');
             var lastResult = document.querySelector('#lastResult');
@@ -6,13 +8,14 @@
             
             var guessSubmit = document.querySelector('.guessSubmit');
             var guessField = document.querySelector('.guessField');
-            $(".guessSubmit").css("background-color", "#db8cce");
+            $(".guessSubmit").css("background-color", "#B98EB7");
             
             var guessCount = 1;
             var winCount = 0;
             var lossCount = 0;
             var resetButton = document.querySelector('#reset');    
             $("#reset").css("background-color", "#2ca7e0");
+            
             resetButton.style.display = 'none';                           
 
             var resetButton;
