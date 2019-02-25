@@ -33,7 +33,7 @@
     
 </div>
 
-<h2><span id="markImg1"></span>What is the smallest state?</h2>
+<h2><span id="markImg"></span>What is the smallest state?</h2>
 <div id+"q3_feedback">
 <input type="radio" name="q3" id="maine" ><label for="maine">Maine</label>
 <input type="radio" name="q3" id="ri" value="Rhode Island"><label for="ri">Rhode Island</label>
@@ -69,6 +69,7 @@
 <button id="submitBtn">Submit</button>
 <h2 id="validSubmission"></h2>
 <h2 id="totalTimes"></h2>
+<h2 id="prevScores"></h2>
 <img id="buddyverified" src="../../img/buddy_verified.png" alt="Buddy Verified Picture" />
 <footer>
             <img src="../../img/csumbLogo.png" alt="csumb logo"/>
@@ -95,7 +96,7 @@
         $(".active").on("click", function(){
             $(".active").css("background", "");
             $(this).css("background", "yellow");
-            // alert($(this).attr("id"));
+            
             q5_response = $(this).attr("id");
         });
         
@@ -103,23 +104,23 @@
             let isValid = true;
             if ($("#q1").val() == "") {
                 isValid = false;
-                $("#validSubmission").html("Question 1 not answered.");
+                $("#validSubmission").append("Question 1 not answered.");
             }
             if ($("#q2").val() == "") {
                 isValid = false;
-                $("#validSubmission").html("Question 2 not answered.");
+                $("#validSubmission").append("Question 2 not answered.");
             }
             if ($("#q3").val() == "") {
                 isValid = false;
-                $("#validSubmission").html("Question 3 not answered.");
+                $("#validSubmission").append("Question 3 not answered.");
             }
             if ($("#q4").val() == "") {
                 isValid = false;
-                $("#validSubmission").html("Question 4 not answered.");
+                $("#validSubmission").append("Question 4 not answered.");
             }
             if ($("#q5").val() == "") {
                 isValid = false;
-                $("#validSubmission").html("Question 5 not answered.");
+                $("#validSubmission").append("Question 5 not answered.");
             }
             return isValid;
         }
@@ -134,65 +135,65 @@
             
             let total_points=0;
 
-           let q1_response = $("#q1".val();
+           let q1_response = $("#q1").val();
            let q2_response = $("#q2").val();
            let q3_response = $("input[name=q3]:checked").val();
            // Question 1
            if(q1_response == q1_answer){
                $("#q1_feedback").html("Correct!");
                total_points += q1_value;
-               $("#markImg1").html("<img src='img/checkmark.png' alt='checkmark'>");
+               $("#markImg").html("<img src='img/checkmark.png' alt='checkmark'>");
                $("#total").html(total_points);
                $("#q1_feedback").attr("class", "correct");
            } else {
                $("#q1_feedback").html("Incorrect!");
                $("#q1_feedback").attr("class", "incorrect");
-               $("#markImg1").html("<img src='img/xmark.png' alt='xmark'>");
+               $("#markImg").html("<img src='img/xmark.png' alt='xmark'>");
            }
            // Question 2
            if(q2_response == q2_answer){
                $("#q2_feedback").html("Correct!");
                
                total_points += q2_value;
-               $("#markImg1").html("<img src='img/checkmark.png' alt='checkmark'>");
+               $("#markImg").html("<img src='img/checkmark.png' alt='checkmark'>");
                $("#q2_feedback").attr("class", "correct");
            } else {
                $("#q2_feedback").html("Incorrect!");
                $("#q2_feedback").attr("class", "incorrect");
-               $("#markImg1").html("<img src='img/xmark.png' alt='xmark'>");
+               $("#markImg").html("<img src='img/xmark.png' alt='xmark'>");
            }
            // Question 3
            if(q3_response == q3_answer){
                $("#q3_feedback").html("Correct!");
                $("#q3_feedback").attr("class", "correct");
                total_points += q3_value;
-               $("#markImg1").html("<img src='img/checkmark.png' alt='checkmark'>");
+               $("#markImg").html("<img src='img/checkmark.png' alt='checkmark'>");
            } else {
                $("#q3_feedback").html("Incorrect!");
                $("#q3_feedback").attr("class", "incorrect");
-               $("#markImg1").html("<img src='img/xmark.png' alt='xmark'>");
+               $("#markImg").html("<img src='img/xmark.png' alt='xmark'>");
            }
            // Question 4
             if ($("#Jefferson").is(":checked") && $("#Roosevelt").is(":checked") && !$("#Jackson").is(":checked")&& !$("#Franklin").is(":checked")){
                $("#q4_feedback").html("Correct!");
                $("#q4_feedback").attr("class", "correct");
                total_points += q4_value;
-               $("#markImg1").html("<img src='img/checkmark.png' alt='checkmark'>");
+               $("#markImg").html("<img src='img/checkmark.png' alt='checkmark'>");
            } else {
                $("#q4_feedback").html("Incorrect!");
                $("#q4_feedback").attr("class", "incorrect");
-               $("#markImg1").html("<img src='img/xmark.png' alt='xmark'>");
+               $("#markImg").html("<img src='img/xmark.png' alt='xmark'>");
            }
            // Question 5
            if (q5_response == q5_answer){
                $("#q5_feedback").html("Correct!");
                $("#q5_feedback").attr("class", "correct");
                total_points += q5_value;
-               $("#markImg1").html("<img src='img/checkmark.png' alt='checkmark'>");
+               $("#markImg").html("<img src='img/checkmark.png' alt='checkmark'>");
            } else {
                $("#q5_feedback").html("Incorrect!");
                $("#q5_feedback").attr("class", "incorrect");
-               $("#markImg1").html("<img src='img/xmark.png' alt='xmark'>");
+               $("#markImg").html("<img src='img/xmark.png' alt='xmark'>");
            }
            $("#total").html("The total score is " + total_points);
            if (total_points != 100) {
