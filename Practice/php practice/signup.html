@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <script>
+            /* global $ */
+            
+            $(document).ready(function() {
+                
+                $("#username1").change(function() {
+                    $.ajax({
+
+                        type: "GET",
+                        url: "",
+                        dataType: "json",
+                        data: { "": },
+                        success: function(data,status) {
+                        //alert(data);
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                        
+                        });//ajax
+                })
+            })
+            
+        </script>
+    </head>
+    <body>
+
+<fieldset>
+    <legend>
+        Sign Up
+    </legend>
+    
+    First Name: <input type="text" id="fName" name="fName" /><br>
+    Last Name: <input type="text" id="lName" name="lName" /><br>
+    
+    Username: <input type="text" id="username1" />
+    <span id="username1Error"></span><br>
+    
+    Username: <input type="text" id="username2" />
+    <span id="username2Error"></span><br>
+    
+    <password id=""
+    
+    
+</fieldset>
+
+
+    </body>
+</html>

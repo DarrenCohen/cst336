@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice 5: Like/Dislike Video App</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+
+  <!--Embed here any YouTube video using the "iframe" tag -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rOvzAwIr_oM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+  
+  <button id="like" onclick="like()">
+    <img src="img/like.png" alt="Like button" width="35" />
+  </button>
+  
+  <button id="cancelLike" onclick="like()" style="display: none;">
+    <img src="img/cancel_like.png" alt="Like button" width="35" />
+  </button>
+  
+    <!--The number of likes is displayed within the span below-->
+  <span id="likes"></span>
+  
+    <button id="dislike" onclick="dislike()">
+    <img src="img/dislike.png" alt="Dislike button" width="35" />
+  </button>
+  
+  <button id="cancelDislike" onclick="like()" style="display: none;">
+    <img src="img/cancel_dislike.png" alt="Like button" width="35" />
+  </button>
+  
+    <span id="dislikes"></span>
+
+</body>
+
+
+<script>
+/* global $ */
+
+function ajaxCall(action)
+{
+  if(action == "like")
+  {
+    $("#like").attr("src","img/cancel_dislike.png");
+  }
+  
+  	$.ajax({
+            type: "get",
+            url:  "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php",
+            dataType: "json",
+            data: { "videoId": "rOvzAwIr_oM",
+              "action": action
+            },  //   <----AS THE VALUE, ENTER THE YOUTUBE VIDEO ID
+            
+            success: function(data,status) {
+                 $("#likes").html(data.likes);
+                 $("#dislikes").html(data.dislikes);
+              },
+              complete: function(data,status) { 
+                  //alert(status);
+              }
+         });
+  
+}
+
+
+  //This AJAX call returns a number of "likes" and "dislikes"
+  //Enter a YouTube video id for "data".
+	$.ajax({
+            type: "get",
+            url:  "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php",
+            dataType: "json",
+            data: { "videoId": "rOvzAwIr_oM"
+              
+            },  //   <----AS THE VALUE, ENTER THE YOUTUBE VIDEO ID
+            
+            success: function(data,status) {
+                 $("#likes").html(data.likes);
+                 $("#dislikes").html(data.dislikes);
+
+              },
+              complete: function(data,status) { 
+                  //alert(status);
+              }
+         });
+         
+         function like(){
+           ajaxCall("like");
+           $("#like").css("display", "none");
+           $("#cancelLike").css("display", "inline");
+         }
+
+         function dislike(){
+           ajaxCall("dislike");
+           $("#dislike").css("display", "none");
+         }
+
+	         function cancelLike(){
+           ajaxCall("cancel");
+           $("#like").css("display", "inline");
+         }
+         
+         	  function cancelDislike(){
+           ajaxCall("cancel");
+           $("#dislike").css("display", "inline");
+           $("#cancelDislike").css("display", "inline");
+         }
+         
+</script>
+</html>

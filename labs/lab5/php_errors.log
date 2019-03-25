@@ -1,0 +1,2 @@
+[06-Mar-2019 00:36:59 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 8
+[06-Mar-2019 00:38:56 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 8
